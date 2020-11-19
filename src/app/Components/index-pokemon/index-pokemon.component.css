@@ -1,0 +1,18 @@
+.font-texto {
+  padding-top: 40px;
+  font-size: 80px;
+}
+
+.bordes {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+input:focus,
+input.border:focus {
+  outline: 0px !important;
+  outline-width: 0 !important;
+  box-shadow: none;
+
+}

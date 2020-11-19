@@ -1,0 +1,31 @@
+<h1 class="text-center mt-5 font-texto">Pokedex</h1>
+
+
+
+<form class="form-inline pt-5" [formGroup]="buscador">
+  <div class="form-group mx-sm-3 mb-2 d-flex justify-content-center">
+    <input type="text" class="form-control bordes"  formControlName="name" placeholder="Shearch Pokemon">
+  </div>   
+  <button type="submit" class="btn btn-primary  mb-2" (click)="SearchPokemon()"> Search</button>
+</form>
+
+   
+
+<div  class="row mt-5">
+
+ 
+    <div class="col-md-4" *ngFor="let pokemon of PokeList; let i = index">
+        <div class="card mb-3 border border-danger" style="width: 18rem;">
+            <img src="../../../assets/Img/descargar.jpg" class="card-img-top p-3 " alt="...">
+            <h2 class="card-title text-center pt-3"> {{pokemon['name']}}</h2>
+            <div class="card-body">
+            </div>
+            <button type="button" [routerLink]="['/Pokemon', pokemon['name']]" class="btn btn-primary btn-sm">Pokemon Details</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+

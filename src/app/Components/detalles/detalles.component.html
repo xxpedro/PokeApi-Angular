@@ -1,0 +1,45 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="bg-light shadow-lg p-5 rounded">
+    <h2 class="font-text text-center ">{{PokeNombre}}</h2>
+</div>
+
+<div class="container">
+    <div class="row mt-5 ">
+        <div class="col-md-6 col-sm-6" >
+            <div class="d-flex">
+                <div class="pr-2" >
+                    <div class="card bg-light mb-3"  style="max-width: 18rem;">
+                        <div class="card-header"><h2>Moves</h2></div>
+                            <div class="card-body">
+                                <h5 class="card-text" *ngFor="let pokeMove of move" > {{pokeMove}}</h5>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <div class="d-flex justify-content-between">
+                <div class="card border-light mb-3" style="max-width: 18rem;">
+                <div class="card-header"><h2>Abilities</h2></div>
+                    <div class="card-body">
+                        <p class="card-text" *ngFor="let i of AbilitiesList"> {{i.ability.name}}</p>
+                    </div>
+                </div>
+                <div class="card border-light mb-3" style="max-width: 18rem;">
+                    <div class="card-header"><h2>Type</h2></div>
+                        <div class="card-body">
+                            <p class="card-text" *ngFor="let i of type">{{i.type.name}}</p>
+                        </div>
+                    </div>
+                </div>
+
+            <div class="d-flex justify-content-center">
+                <img [src]="Image" alt="" class="levitate" style="width: 100%; max-width: 1200px;">
+            </div>
+            
+            <input type="button" class="btn btn-success btn-lg btn-block" value="Download more Poke-data" (click)="CreateArchive()">
+        </div>
+    </div>
+</div>
