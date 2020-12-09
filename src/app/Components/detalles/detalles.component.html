@@ -39,7 +39,7 @@
                 <img [src]="Image" alt="" class="levitate" style="width: 100%; max-width: 1200px;">
             </div>
             
-            <input type="button" class="btn btn-success btn-lg btn-block" value="Download more Poke-data" (click)="CreateArchive()">
+            <a [href]="fileUrl" class="btn btn-success btn-lg btn-block" value="Download more Poke-data" download="{{PokeNombre}}.txt" (click)="CreateArchive()"> Download more PokeData</a>
         </div>
     </div>
 </div>
